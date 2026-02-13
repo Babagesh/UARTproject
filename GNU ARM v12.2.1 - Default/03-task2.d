@@ -1,4 +1,4 @@
-task2.o: ../task2.c \
+03-task2.o: ../03-task2.c \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/leddrv/inc/sl_simple_led.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/leddrv/inc/sl_led.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_status.h \

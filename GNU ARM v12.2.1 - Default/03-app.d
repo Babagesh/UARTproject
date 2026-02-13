@@ -1,20 +1,4 @@
-task1.o: ../task1.c \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/leddrv/inc/sl_simple_led.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/leddrv/inc/sl_led.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_status.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/gpio/inc/sl_gpio.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_manager/inc/sl_device_gpio.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_enum.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_code_classification.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sli_code_classification.h \
- /Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/autogen/sl_simple_led_instances.h \
- /Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/autogen/sl_simple_button_instances.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/button/inc/sl_simple_button.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/button/inc/sl_button.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_common.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_assert.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/cmsis_compiler.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/cmsis_gcc.h \
+03-app.o: ../03-app.c ../blink.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/include/FreeRTOS.h \
  /Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/config/FreeRTOSConfig.h \
  /Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/autogen/RTE_Components.h \
@@ -23,12 +7,16 @@ task1.o: ../task1.c \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/core_cm33.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/cmsis_version.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/cmsis_compiler.h \
+ /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/cmsis_gcc.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/interrupt_manager/inc/arm/cmsis_nvic_virtual.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/interrupt_manager/inc/sl_interrupt_manager.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_core.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_code_classification.h \
+ /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sli_code_classification.h \
+ /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_status.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/mpu_armv8.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/Device/SiliconLabs/EFR32MG24/Include/system_efr32mg24.h \
+ /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_code_classification.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/Device/SiliconLabs/EFR32MG24/Include/efr32mg24_scratchpad.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/Device/SiliconLabs/EFR32MG24/Include/efr32mg24_emu.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/Device/SiliconLabs/EFR32MG24/Include/efr32mg24_cmu.h \
@@ -81,42 +69,8 @@ task1.o: ../task1.c \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/include/deprecated_definitions.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/portable/GCC/ARM_CM33_NTZ/non_secure/portmacro.h \
  /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/portable/GCC/ARM_CM33_NTZ/non_secure/portmacrocommon.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/include/mpu_wrappers.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/include/task.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/include/list.h \
- /Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/autogen/sl_uartdrv_instances.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/uartdrv/inc/uartdrv.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_manager/inc/sl_device_peripheral.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_manager/inc/sl_device_peripheral_types.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_manager/inc/sl_device_clock.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emlib/inc/em_usart.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emlib/inc/em_eusart.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emlib/inc/em_eusart_compat.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/clock_manager/inc/sl_clock_manager.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_manager/inc/sl_device_clock.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/common/inc/ecode.h \
- /Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/config/uartdrv_config.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/dmadrv/inc/dmadrv.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/dmadrv/inc/s2_signals/dmadrv_signals.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emlib/inc/em_ldma.h \
- /Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/config/dmadrv_config.h \
- /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/sleeptimer/inc/sl_sleeptimer.h
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/leddrv/inc/sl_simple_led.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/leddrv/inc/sl_led.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_status.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/gpio/inc/sl_gpio.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_manager/inc/sl_device_gpio.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_enum.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_code_classification.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sli_code_classification.h:
-/Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/autogen/sl_simple_led_instances.h:
-/Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/autogen/sl_simple_button_instances.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/button/inc/sl_simple_button.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/driver/button/inc/sl_button.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_common.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_assert.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/cmsis_compiler.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/cmsis_gcc.h:
+ /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/include/mpu_wrappers.h
+../blink.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/include/FreeRTOS.h:
 /Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/config/FreeRTOSConfig.h:
 /Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/autogen/RTE_Components.h:
@@ -125,12 +79,16 @@ task1.o: ../task1.c \
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/core_cm33.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/cmsis_version.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/cmsis_compiler.h:
+/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/cmsis_gcc.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/interrupt_manager/inc/arm/cmsis_nvic_virtual.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/interrupt_manager/inc/sl_interrupt_manager.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_core.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_code_classification.h:
+/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sli_code_classification.h:
+/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_status.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include/mpu_armv8.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/Device/SiliconLabs/EFR32MG24/Include/system_efr32mg24.h:
+/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc/sl_code_classification.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/Device/SiliconLabs/EFR32MG24/Include/efr32mg24_scratchpad.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/Device/SiliconLabs/EFR32MG24/Include/efr32mg24_emu.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/Device/SiliconLabs/EFR32MG24/Include/efr32mg24_cmu.h:
@@ -184,22 +142,3 @@ task1.o: ../task1.c \
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/portable/GCC/ARM_CM33_NTZ/non_secure/portmacro.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/portable/GCC/ARM_CM33_NTZ/non_secure/portmacrocommon.h:
 /Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/include/mpu_wrappers.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/include/task.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//util/third_party/freertos/kernel/include/list.h:
-/Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/autogen/sl_uartdrv_instances.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/uartdrv/inc/uartdrv.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_manager/inc/sl_device_peripheral.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_manager/inc/sl_device_peripheral_types.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_manager/inc/sl_device_clock.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emlib/inc/em_usart.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emlib/inc/em_eusart.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emlib/inc/em_eusart_compat.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/clock_manager/inc/sl_clock_manager.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/device_manager/inc/sl_device_clock.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/common/inc/ecode.h:
-/Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/config/uartdrv_config.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/dmadrv/inc/dmadrv.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emdrv/dmadrv/inc/s2_signals/dmadrv_signals.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/emlib/inc/em_ldma.h:
-/Users/bjethwani/SimplicityStudio/v5_workspace/blink_kernel_freertos_hw5/config/dmadrv_config.h:
-/Users/bjethwani/SimplicityStudio/SDKs/simplicity_sdk//platform/service/sleeptimer/inc/sl_sleeptimer.h:
