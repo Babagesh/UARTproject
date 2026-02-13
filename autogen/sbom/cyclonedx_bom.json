@@ -3,7 +3,7 @@
   "specVersion" : "1.6",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-02-13T02:20:20Z",
+    "timestamp" : "2026-02-13T04:52:45Z",
     "authors" : [ {
       "name" : "Silicon Laboratories, Inc."
     } ],
@@ -962,6 +962,138 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2025.6.2:gpio",
       "name" : "GPIO Driver",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:uartdrv_core",
+      "name" : "UARTDRV Core",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:dmadrv_core",
+      "name" : "DMADRV Core",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_eusart",
+      "name" : "EUSART",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_usart",
+      "name" : "USART",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_ldma",
+      "name" : "LDMA",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:dmadrv",
+      "name" : "DMADRV",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:ecode",
+      "name" : "EMDRV Common Headers",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:uartdrv_usart",
+      "name" : "UARTDRV USART",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:simple_button",
+      "name" : "Simple Button",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:button",
+      "name" : "Generic Button API",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:simple_button_core",
+      "name" : "Simple Button Configuration",
       "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."

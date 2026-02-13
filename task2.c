@@ -17,19 +17,20 @@
 
 #include "sl_simple_led.h"
 #include "sl_simple_led_instances.h"
+#include "sl_simple_button_instances.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "sl_uartdrv_instances.h"
+#include <stdio.h>
+#include <string.h>
 
 /*******************************************************************************
  *******************************   DEFINES   ***********************************
  ******************************************************************************/
 
-#ifndef LED_INSTANCE
-#define LED_INSTANCE               sl_led_led0
-#endif
 
 #ifndef TOOGLE_DELAY_MS
-#define TOOGLE_DELAY_MS            1000
+#define TOOGLE_DELAY_MS            100
 #endif
 
 #ifndef BLINK_TASK_STACK_SIZE
@@ -52,7 +53,8 @@
  *********************   LOCAL FUNCTION PROTOTYPES   ***************************
  ******************************************************************************/
 
-static void blink_task(void *arg);
+static void task2_task(void *arg);
+static UARTDRV_Handle_t uart_handle;
 
 /*******************************************************************************
  **************************   GLOBAL FUNCTIONS   *******************************
@@ -61,7 +63,7 @@ static void blink_task(void *arg);
 /***************************************************************************//**
  * Initialize blink example.
  ******************************************************************************/
-void blink_init(void)
+void task2_init(void)
 {
   TaskHandle_t xHandle = NULL;
 
@@ -71,7 +73,7 @@ void blink_init(void)
   static StackType_t  xStack[BLINK_TASK_STACK_SIZE];
 
   // Create Blink Task without using any dynamic memory allocation
-  xHandle = xTaskCreateStatic(blink_task,
+  xHandle = xTaskCreateStatic(task2_task,
                               "blink task",
                               BLINK_TASK_STACK_SIZE,
                               ( void * ) NULL,
@@ -89,7 +91,7 @@ void blink_init(void)
   BaseType_t xReturned = pdFAIL;
 
   // Create Blink Task using dynamic memory allocation
-  xReturned = xTaskCreate(blink_task,
+  xReturned = xTaskCreate(task2_task,
                           "blink task",
                           BLINK_TASK_STACK_SIZE,
                           ( void * ) NULL,
@@ -106,18 +108,35 @@ void blink_init(void)
 /*******************************************************************************
  * Blink task.
  ******************************************************************************/
-static void blink_task(void *arg)
+static void task2_task(void *arg)
 {
   (void)&arg;
 
   //Use the provided calculation macro to convert milliseconds to OS ticks
-  const TickType_t xDelay = pdMS_TO_TICKS(TOOGLE_DELAY_MS);;
+  uart_handle = sl_uartdrv_get_default();
+  unsigned char uart_rx_byte;
+
 
   while (1) {
     //Wait for specified delay
-    vTaskDelay(xDelay);
+    UARTDRV_ReceiveB(uart_handle, &uart_rx_byte, 1);
+    if(uart_rx_byte == '1')
+      {
+        sl_led_turn_on(&sl_led_led0);
+      }
+    else if(uart_rx_byte == '2')
+      {
+        sl_led_turn_off(&sl_led_led0);
+      }
+    else if(uart_rx_byte == '7')
+          {
+            sl_led_turn_on(&sl_led_led1);
+          }
+    else if(uart_rx_byte == '8')
+              {
+                sl_led_turn_off(&sl_led_led1);
+              }
 
     // Toggle led
-    sl_led_toggle(&LED_INSTANCE);
   }
 }

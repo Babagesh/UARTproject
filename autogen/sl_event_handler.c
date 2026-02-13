@@ -4,7 +4,9 @@
 #include "sl_clock_manager.h"
 #include "sl_board_control.h"
 #include "sl_gpio.h"
+#include "sl_simple_button_instances.h"
 #include "sl_simple_led_instances.h"
+#include "sl_uartdrv_instances.h"
 #include "cmsis_os2.h"
 
 void sli_driver_permanent_allocation(void)
@@ -42,7 +44,9 @@ void sl_kernel_start(void)
 void sl_driver_init(void)
 {
   sl_gpio_init();
+  sl_simple_button_init_instances();
   sl_simple_led_init_instances();
+  sl_uartdrv_init_instances();
 }
 
 void sl_service_init(void)
